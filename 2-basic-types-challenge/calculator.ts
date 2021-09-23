@@ -1,20 +1,20 @@
 /**
  * Let's make a calculator 🧮
  */
-type calculateOperator = 'add' | 'substract' | 'multiply' | 'divide' | 'remainder'
-type calculateOperand = {
+type Command = 'add' | 'substract' | 'multiply' | 'divide' | 'remainder'
+type Operand = {
   pre : number
   next : number
 }
-const operatorFuncs = {
-  'add' : (op :calculateOperand): number => op.pre + op.next,
-  'substract' : (op :calculateOperand): number => op.pre - op.next,
-  'multiply' : (op :calculateOperand): number => op.pre * op.next,
-  'divide' : (op :calculateOperand): number => op.pre / op.next,
-  'remainder': (op :calculateOperand): number => op.pre % op.next,
+const operators = {
+  'add' : (operand :Operand): number => operand.pre + operand.next,
+  'substract' : (operand :Operand): number => operand.pre - operand.next,
+  'multiply' : (operand :Operand): number => operand.pre * operand.next,
+  'divide' : (operand :Operand): number => operand.pre / operand.next,
+  'remainder': (operand :Operand): number => operand.pre % operand.next,
 }
-const calculate = (operator : calculateOperator, pre : number, next: number) : number => {
-  return operatorFuncs[operator]({pre, next})
+const calculate = (command : Command, pre : number, next: number) : number => {
+  return operators[command]({pre, next})
 }
 
 console.log(calculate('add', 1, 3)); // 4
