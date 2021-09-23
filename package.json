@@ -1,0 +1,11 @@
+{
+  "name": "ts-oop-study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ghdmsrkd/ts-oop-study.git",
+  "author": "devhipo <ghdmsrkd@naver.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.2.1"
+  }
+}
