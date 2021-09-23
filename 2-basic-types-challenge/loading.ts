@@ -24,9 +24,9 @@
     if(loadState.state === "loading")
       console.log("👀 loading...")
     else if(loadState.state === "success")
-    console.log("😃 loaded")
+    console.log(`😃 ${loadState.response.body}`)
     else if(loadState.state === "fail")
-    console.log("😱 no network")
+    console.log(`😱 ${loadState.reason}`)
   }
 
   printLoginState({ state: 'loading' }); // 👀 loading...
