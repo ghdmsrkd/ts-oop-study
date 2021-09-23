@@ -6,6 +6,8 @@
   "author": "devhipo <ghdmsrkd@naver.com>",
   "license": "MIT",
   "devDependencies": {
-    "ts-node": "^10.2.1"
+    "@types/node": "^16.9.6",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   }
 }
